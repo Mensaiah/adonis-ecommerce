@@ -3,12 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node ace migration:run --force && node ace build --production",
-    "start": "node build/server.js",
+    "build": "node ace build --production",
+    "start": "node server.js",
     "dev": "node ace serve --watch",
     "lint": "eslint . --ext=.ts",
-    "format": "prettier --write .",
-    "postinstall": "npm run build"
+    "format": "prettier --write ."
   },
   "engines": {
     "node": "v14.15.4"
