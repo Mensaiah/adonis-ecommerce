@@ -1,13 +1,13 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import ProductCategory from '../../Models/ProductCategory'
-import { schema, rules } from '@ioc:Adonis/Core/Validator'
+import { schema } from '@ioc:Adonis/Core/Validator'
 
 export default class ProductCategoriesController {
-  public async index(ctx: HttpContextContract) {
+  public async index() {
     return { data: await ProductCategory.all() }
   }
 
-  public async store({ request, response, auth }: HttpContextContract) {
+  public async store({ request, response }: HttpContextContract) {
     const newUserSchema = schema.create({
       name: schema.string({ trim: true }),
       status: schema.boolean.optional(),

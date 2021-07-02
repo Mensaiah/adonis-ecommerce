@@ -43,7 +43,7 @@ Route.resource('/product-subcategories', 'ProductSubCategoriesController')
     '*': ['auth'],
   })
   .apiOnly()
-Route.any('*', async ({ request, response, params }) => {
+Route.any('*', async ({ response }) => {
   response.status(404)
   return { error: 'Not Found' }
 })
