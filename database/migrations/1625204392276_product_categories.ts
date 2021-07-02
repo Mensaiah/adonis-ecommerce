@@ -12,8 +12,8 @@ export default class ProductCategories extends BaseSchema {
        * Uses timestamptz for PostgreSQL and DATETIME2 for MSSQL
        */
       table.timestamps(true, true)
-      table.timestamp('created_at', { useTz: true })
-      table.timestamp('updated_at', { useTz: true })
+      // table.timestamp('created_at', { useTz: true })
+      // table.timestamp('updated_at', { useTz: true })
     })
   }
 
