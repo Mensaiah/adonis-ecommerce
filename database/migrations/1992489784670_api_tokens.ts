@@ -10,7 +10,7 @@ export default class ApiTokens extends BaseSchema {
       table.string('name').notNullable()
       table.string('type').notNullable()
       table.string('token', 64).notNullable()
-
+      table.timestamp('expires_at', { useTz: true }).nullable()
       /**
        * "useTz: true" utilizes timezone option in PostgreSQL and MSSQL
        */
